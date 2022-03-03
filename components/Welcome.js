@@ -20,7 +20,7 @@ const App = () => {
           </h3>
           <RegisterButton
             buttonWidth="216px"
-            linkTo="/register"
+            linkTo="/api/auth/login"
             buttonText="Start your first call"
           />
         </div>
