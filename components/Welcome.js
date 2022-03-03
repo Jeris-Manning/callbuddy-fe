@@ -2,7 +2,7 @@ import React from "react";
 import ImgNext from "../components/ImgNext";
 import styled from "styled-components";
 import people from "../public/images/people.svg";
-import RegisterButton from "../components/buttons/PrimaryButton";
+import RegisterButton from "../components/buttons/RegisterButton";
 
 const App = () => {
   return (

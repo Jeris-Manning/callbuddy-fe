@@ -3,7 +3,7 @@ import ImgNext from "../components/ImgNext";
 import styled from "styled-components";
 import { useForm } from "react-hook-form";
 import people from "../public/images/people.svg";
-import PrimaryButton from "../components/buttons/PrimaryButton";
+import RegisterButton from "../components/buttons/RegisterButton";
 
 const Register = () => {
   const {
@@ -52,7 +52,7 @@ const Register = () => {
 
             <input type="submit" />
           </form>
-          <PrimaryButton
+          <RegisterButton
             buttonWidth="216px"
             linkTo="/register"
             buttonText="Start your first call"
