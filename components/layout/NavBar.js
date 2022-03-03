@@ -84,6 +84,7 @@ const StyledHeader = styled.header`
   align-items: center;
   width: 100%;
   margin: 6px 58px;
+  z-index: 20;
 
   @media (max-width: 1000px) {
     margin: 10px 58px;
