@@ -6,7 +6,6 @@ import styled from "styled-components";
 import logoGraphic from "../../public/images/logoGraphic.svg";
 import logoText from "../../public/images/logoText.svg";
 import accountIcon from "../../public/images/accountIcon.svg";
-import PrimaryButton from "../buttons/PrimaryButton";
 import RegisterButton from "../buttons/RegisterButton";
 import hamburger from "../../public/images/hamburger.svg";
 const NavBar = () => {

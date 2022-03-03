@@ -2,7 +2,7 @@ import React from "react";
 import ImgNext from "../components/ImgNext";
 import styled from "styled-components";
 import people from "../public/images/people.svg";
-import PrimaryButton from "../components/buttons/PrimaryButton";
+import RegisterButton from "../components/buttons/PrimaryButton";
 
 const App = () => {
   return (
@@ -18,7 +18,7 @@ const App = () => {
             and it will make a phone call for you and transcribe everything back
             to text.
           </h3>
-          <PrimaryButton
+          <RegisterButton
             buttonWidth="216px"
             linkTo="/register"
             buttonText="Start your first call"
