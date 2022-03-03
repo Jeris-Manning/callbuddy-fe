@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useUser } from "@auth0/nextjs-auth0";
 import ImgNext from "../ImgNext";
 import Link from "next/link";
 import styled from "styled-components";
@@ -6,10 +7,11 @@ import logoGraphic from "../../public/images/logoGraphic.svg";
 import logoText from "../../public/images/logoText.svg";
 import accountIcon from "../../public/images/accountIcon.svg";
 import PrimaryButton from "../buttons/PrimaryButton";
+import RegisterButton from "../buttons/RegisterButton";
 import hamburger from "../../public/images/hamburger.svg";
 const NavBar = () => {
   const [burgerOpen, setBurgerOpen] = useState(false);
-  const [loggedIn, setLoggedIn] = useState(false);
+  const { user, error, isLoading } = useUser();
 
   return (
     <StyledHeader>
@@ -29,7 +31,7 @@ const NavBar = () => {
           </LogoDiv>
         </a>
       </Link>
-      {loggedIn ? (
+      {user ? (
         <RegisterDiv>
           <Link href="/">
             <a>Home</a>
@@ -50,24 +52,23 @@ const NavBar = () => {
               src={hamburger}
             />
           )}
-          <Link href="/account">
-            <a className="accountContainer">
-              <span>Account</span>
-              <ImgNext
-                className="accountIcon"
-                alt="Icon of person's bust"
-                src={accountIcon}
-              />
-            </a>
-          </Link>
+
+          <a href="/api/auth/logout" className="accountContainer">
+            <span>Logout</span>
+            <ImgNext
+              className="accountIcon"
+              alt="Icon of person's bust"
+              src={accountIcon}
+            />
+          </a>
         </RegisterDiv>
       ) : (
         <UnregisteredDiv>
           <a href="/api/auth/login">Log In</a>
 
-          <PrimaryButton
+          <RegisterButton
             buttonWidth="130px"
-            linkTo="/register"
+            linkTo="/api/auth/login"
             buttonText="Register"
           />
         </UnregisteredDiv>

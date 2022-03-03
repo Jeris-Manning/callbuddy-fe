@@ -3,12 +3,10 @@ import React from "react";
 import styled from "styled-components";
 import Link from "next/link";
 
-
-const CallCategoryButton = ({ color, linkTo, icon, buttonText }) => {
-
+const CallCategoryButton = ({ colorA, colorB, linkTo, icon, buttonText }) => {
   return (
     <Link href={linkTo} passHref>
-      <ButtonLink $colorA={color + "96"} $colorB={color + "FF"}>
+      <ButtonLink $colorA={colorA} $colorB={colorB}>
         <ImgNext
           className="buttonIcon"
           alt="hand holding medical cross symbol"
